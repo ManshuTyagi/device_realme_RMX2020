@@ -47,14 +47,22 @@ TARGET_SCREEN_WIDTH := 720
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
-    android.hardware.audio.effect@5.0-impl \
+    android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.common@6.0-util \
     android.hardware.bluetooth.audio@2.0-impl \
+    audio.a2dp.default \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
-    libaudiofondation.vendor \
+    audio_policy.stub \
+    libaudiofoundation \
+    libaudiofoundation.vendor \
     libtinycompress \
+    libtinycompress.vendor \
+    libnbaio_mono \
+    libaudiopreprocessing \
+    libbundlewrapper \
+    libdownmix \
     libtinyxml \
     libalsautils \
     libnbaio_mono
@@ -95,12 +103,9 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@2.0-impl \
-    android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.common@1.2 \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.composer@2.1-service \
-    android.hardware.graphics.mapper@2.0-impl-2.1 \
+    libdrm.vendor \
     libvulkan
 
 # DRM
@@ -200,6 +205,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
 
+# Net
+PRODUCT_PACKAGES += \
+    libpcap.vendor
+
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -277,20 +286,6 @@ PRODUCT_PACKAGES += \
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
-
-# Radio
-PRODUCT_PACKAGES += \
-    android.hardware.broadcastradio@1.0 \
-    android.hardware.broadcastradio@1.1 \
-    android.hardware.radio@1.0 \
-    android.hardware.radio@1.1 \
-    android.hardware.radio@1.2 \
-    android.hardware.radio@1.3 \
-    android.hardware.radio@1.4 \
-    android.hardware.radio@1.5 \
-    android.hardware.radio.config@1.1 \
-    android.hardware.radio.config@1.2 \
-    android.hardware.radio.deprecated@1.0
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -375,6 +370,7 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@2.0-impl \
     android.hardware.thermal@1.0-service
 
 # TinyXML
@@ -393,14 +389,6 @@ PRODUCT_PACKAGES += \
 # Video Telephony
 PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.videotelephony@1.0
-
-# VNDK
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib/libunwindstack-v29.so \
-    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcompiler_rt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcompiler_rt.so \
-    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-core/libmedia_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmedia_helper-v29.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libunwindstack-v29.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcompiler_rt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcompiler_rt.so
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
