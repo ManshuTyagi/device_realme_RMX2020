@@ -52,7 +52,7 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
-    libaudiofondation.vendor \
+    libaudiofoundation.vendor \
     libtinycompress \
     libtinyxml \
     libalsautils \
@@ -185,16 +185,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     com.android.media.swcodec \
     libsfplugin_ccodec
-
-# MTK-IMS
-PRODUCT_BOOT_JARS += \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
@@ -356,17 +346,6 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 PRODUCT_PACKAGES += \
     Snap
 
-# Symbols
-PRODUCT_PACKAGES += \
-    libshim_vtservice
-
-# Telephony
-PRODUCT_BOOT_JARS += \
-    ImsServiceBase
-
-PRODUCT_PACKAGES += \
-    ImsServiceBase
-
 # Text classifier
 PRODUCT_PACKAGES += \
     libtextclassifier_hash.vendor
@@ -384,10 +363,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
-
-# Video Telephony
-PRODUCT_PACKAGES += \
-    vendor.mediatek.hardware.videotelephony@1.0
 
 # VNDK
 PRODUCT_COPY_FILES += \
@@ -411,6 +386,3 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/wifi/wifisar.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifisar.xml \
     $(DEVICE_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
     $(DEVICE_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
-
-PRODUCT_BOOT_JARS += \
-    mtk-wifi-service
