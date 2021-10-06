@@ -31,12 +31,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # IMS
 $(call inherit-product, vendor/mediatek/ims/mtk-ims.mk)
 
-# RealmeDirac
-$(call inherit-product, packages/apps/RealmeDirac/dirac.mk)
-
-# Parts
-$(call inherit-product-if-exists, packages/apps/RealmeParts/parts.mk)
-
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Dynamic Partition
