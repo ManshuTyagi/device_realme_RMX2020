@@ -200,6 +200,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
 
+# Neutral Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.0 \
+    android.hardware.neuralnetworks@1.0.vendor
+
 # NFC
 #PRODUCT_PACKAGES += \
 #    com.android.nfc_extras \
