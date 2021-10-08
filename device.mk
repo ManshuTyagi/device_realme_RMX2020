@@ -143,8 +143,8 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor
 
 # ImsInit hack
-PRODUCT_PACKAGES += \
-    ImsInit
+#PRODUCT_PACKAGES += \
+#    ImsInit
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
