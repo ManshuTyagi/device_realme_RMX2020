@@ -206,8 +206,8 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
 
-PRODUCT_PACKAGES += \
-    NotchBarKiller
+#PRODUCT_PACKAGES += \
+#    NotchBarKiller
 
 # Permissions
 PRODUCT_COPY_FILES += \
