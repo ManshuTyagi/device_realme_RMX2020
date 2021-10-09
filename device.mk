@@ -414,6 +414,10 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
+# Shim
+PRODUCT_PACKAGES += \
+    libshim_camerahalserver
+
 # Camera
 PRODUCT_PACKAGES += \
     Snap
