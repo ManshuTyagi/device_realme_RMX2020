@@ -12,4 +12,5 @@ cc_library_shared {
 cc_library_shared {
     name: "libshim_camerahalserver",
     srcs: ["libshim_camerahalserver.cpp"],
+    vendor: true,
 }
