@@ -422,6 +422,13 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 PRODUCT_PACKAGES += \
     libshim_camerahalserver
 
+# ExternalCallbackTracker
+PRODUCT_BOOT_JARS += \
+    ExternalCallbackTracker
+
+PRODUCT_PACKAGES += \
+    ExternalCallbackTracker
+
 # Camera
 PRODUCT_PACKAGES += \
     Snap

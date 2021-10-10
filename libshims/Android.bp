@@ -14,3 +14,9 @@ cc_library_shared {
     srcs: ["libshim_camerahalserver.cpp"],
     vendor: true,
 }
+
+java_library {
+    name: "ExternalCallbackTracker",
+    installable: true,
+    srcs: ["ExternalCallbackTracker.java"],
+}
